@@ -1,17 +1,35 @@
 <script setup>
-import {useItensStore} from '../store/itens';
-    
-const itensStore = useItensStore()
+import saidas from "./saidas.vue";
+import { useItensStore } from "../store/itens";
+
+const itensStore = useItensStore();
 </script>
 <template>
     <div class="panel">
-                <h2>Entradas</h2>
-                <input v-model="itensStore.bill" class="input" placeholder="Valor" />
-                <input v-model="itensStore.tip" class="input" placeholder="Porcentagem" />
-                <input v-model="itensStore.people" class="input" placeholder="Pessoas" />
-                <button class="small-btn" @click="itensStore.calculate">Calcular</button>
-            </div>
+        <h2>Entradas</h2>
+        <input type="number" v-model="itensStore.bill" class="input" :class="{ erros: itensStore.billErro }"
+            placeholder="Adicione o valor da conta" />
+        <p class="erros-message" v-if="itensStore.billErro">
+            {{ itensStore.billMessage }}
+        </p>
 
+        <input type="number" v-model="itensStore.tip" class="input" :class="{ erros: itensStore.tipErro }"
+            placeholder="Adicione a porcentagem da gorjeta" />
+
+        <p class="erros-message" v-if="itensStore.tipMessage">
+            {{ itensStore.tipMessage }}
+        </p>
+
+        <input type="number" v-model="itensStore.people" class="input" :class="{ erros: itensStore.peopleErro }"
+            placeholder="Adicione o número de pessoas" />
+
+        <p class="erros-message" v-if="itensStore.peopleErro">
+            {{ itensStore.peopleMessage }}
+        </p>
+
+        <button class="small-btn" @click="itensStore.calculate">Calcular</button>
+        <button class="clear-btn" @click="itensStore.clear()">Limpar</button>
+    </div>
 </template>
 <style scoped>
 div {
@@ -21,58 +39,93 @@ div {
 h2 {
     font-size: 2vw;
     color: #ff8d22;
-
 }
-input{
+
+input {
     display: flex;
     margin: 1vw;
     background-color: white;
     border: none;
-    padding: 1vw;
-    color: black;   
+    padding: 0.8vw;
+    color: black;
     text-align: left;
     width: 30vw;
     font-size: 1.2vw;
     border-radius: 0.6vw;
 }
 
-input:focus {
-    background-color: rgb(255, 225, 170);
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffb547;
+}
+
+input.erros {
+    border: 2px solid red;
+    background-color: #ffe5e5;
+}
+
+.erros-message {
+    color: red;
+    font-size: 1vw;
+    margin-top: -0.5vw;
 }
 
 button {
-    width: 32.5vw;
+    width: 31.8vw;
     display: block;
     background-color: #ff8d22;
     border-radius: 0.6vw;
     border: 1px solid transparent;
-    padding: 1vw;
+    padding: 0.8vw;
     font-size: 1.2vw;
     font-family: inherit;
     cursor: pointer;
     transition: border-color 0.25s;
+    font-weight: 700;
 }
+
 button:hover {
-    border-color: #ffc063;
+    border: 1.5px solid #ffc46b;
 }
+
 button:focus,
 button:focus-visible {
-    outline: 4px auto #ffc063;
+    outline: none;
 }
 
+.small-btn:hover {
+    background-color: #ffb547;
+    color: black;
+}
 
+.clear-btn {
+    margin: 1vw 0 0 0;
+    background: none;
+}
+
+button:active {
+    background-color: #ff8d22;
+    transform: scale(0.95);
+}
 
 @media (max-width: 600px) {
     h2 {
         font-size: 3vw;
     }
-    input{
+
+    input {
         padding: 1.5vw;
         font-size: 3vw;
         display: flex;
         margin: 1.5vw;
         width: 55vw;
-    }   
+    }
 
     button {
         width: 58vw;

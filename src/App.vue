@@ -1,26 +1,14 @@
-<template>
-    <div class="app">
-        <h1 class="title">Calculadora de Gorjeta e Divisao</h1>
-
-        <div class="layout">
-            <entradas/>            
-            <div class="panel">
-                <h2>Resultado</h2>
-                <div class="result">Total: {{ itensStore.total }}</div>
-                <div class="result">Gorjeta: {{ itensStore.tipValue }}</div>
-                <div class="result">Por pessoa: {{ itensStore.perPerson }}</div>
-                <div class="result">{{ itensStore.message }}</div>
-            </div>
-        </div>
-    </div>
-</template>
-
-<script setup>
+<script setup lang="ts">
 import Entradas from './components/entradas.vue';
-import {useItensStore} from './store/itens';
+import Saidas from './components/saidas.vue';
 
-const itensStore = useItensStore()
 </script>
+
+<template>
+            <h1 class="title">Calculadora de Gorjeta e Divisão</h1>
+    <entradas/>
+    <saidas/>
+</template>
 
 <style scoped>
 h1 {
