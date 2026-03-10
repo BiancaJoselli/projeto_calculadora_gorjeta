@@ -18,3 +18,46 @@ const itensStore = useItensStore()
     </div>
 </template>
 
+<style scoped>
+.panel {
+    justify-items: center;
+    margin-left: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+    color: #ff8d22;
+}
+
+.result {
+    display: flex;
+    margin: 1vw;
+    background-color: #1e1e1e;
+    border-left: 0.4vw solid #ff8d22;
+    padding: 0.8vw;
+    color: white;
+    width: 30vw;
+    font-size: 1.2vw;
+    border-radius: 0.6vw;
+}
+
+.result:hover {
+    border-left: 0.4vw solid #ffb547;
+}
+
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    .result {
+        padding: 1.5vw;
+        font-size: 3vw;
+        margin: 1.5vw;
+        width: 55vw;
+    }
+
+}
+</style>
+

@@ -13,13 +13,16 @@ import Saidas from './components/saidas.vue';
 <style scoped>
 h1 {
     font-size: 2vw;
-    margin: 1vw 0 0 1vw;
-
+    margin: 1vw 0;
+    text-align: center;
+    color: white;
+    font-weight: 700;
 }
-@media (max-width: 600px) {
 
+@media (max-width: 600px) {
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
+        margin: 2vw 0;
     }
 }
 </style>
