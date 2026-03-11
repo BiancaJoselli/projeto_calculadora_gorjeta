@@ -5,15 +5,15 @@ const itensStore = useItensStore()
 </script>
 
 <template>
-    <div class="app">
-        <div class="layout">
-            <div class="panel">
-                <h2>Resultado</h2>
-                <div class="result">Total: {{ itensStore.total }}</div>
-                <div class="result">Gorjeta: {{ itensStore.tipValue }}</div>
-                <div class="result">Por pessoa: {{ itensStore.perPerson }}</div>
-                <div class="result">{{ itensStore.message }}</div>
-            </div>
+    <div class="panel">
+        <h2>Resultado</h2>
+
+        <div class="result">Total: {{ itensStore.total }}</div>
+        <div class="result">Gorjeta: {{ itensStore.tipValue }}</div>
+        <div class="result">Por pessoa: {{ itensStore.perPerson }}</div>
+
+        <div class="result" v-if="itensStore.message">
+            {{ itensStore.message }}
         </div>
     </div>
 </template>
@@ -21,7 +21,6 @@ const itensStore = useItensStore()
 <style scoped>
 .panel {
     justify-items: center;
-    margin-left: 3vw;
 }
 
 h2 {
@@ -36,7 +35,7 @@ h2 {
     border-left: 0.4vw solid #ff8d22;
     padding: 0.8vw;
     color: white;
-    width: 30vw;
+    width: 28vw;
     font-size: 1.2vw;
     border-radius: 0.6vw;
 }
@@ -60,4 +59,3 @@ h2 {
 
 }
 </style>
-

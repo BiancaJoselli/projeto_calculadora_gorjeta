@@ -11,6 +11,19 @@ import Saidas from './components/saidas.vue';
 </template>
 
 <style scoped>
+.app {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
 h1 {
     font-size: 2vw;
     margin: 1vw 0;
