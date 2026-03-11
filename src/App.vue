@@ -17,6 +17,7 @@ import Saidas from './components/saidas.vue';
 <style scoped>
 
 .layout{ 
+    margin: 5vw 0 0 0;
     display: flex;
     justify-content: center;
     gap: 2vw;
@@ -38,7 +39,7 @@ import Saidas from './components/saidas.vue';
 
 h1 {
     font-size: 2vw;
-    margin: 1vw 0 0 0; 
+    margin: 2vw 0 0 0; 
     color: white;
     font-weight: 700;
     text-align: center;
