@@ -30,10 +30,10 @@ h2 {
 
 .result {
     display: flex;
-    margin: 1vw;
+    margin: 0.8vw;
     background-color: #1e1e1e;
     border-left: 0.4vw solid #ff8d22;
-    padding: 0.8vw;
+    padding: 0.6vw;
     color: white;
     width: 28vw;
     font-size: 1.2vw;

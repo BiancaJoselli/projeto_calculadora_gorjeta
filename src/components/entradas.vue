@@ -49,7 +49,7 @@ input {
     padding: 0.8vw;
     color: black;
     text-align: left;
-    width: 28vw;
+    width: 30vw;
     font-size: 1.2vw;
     border-radius: 0.6vw;
 }
@@ -77,7 +77,7 @@ input.erros {
 }
 
 button {
-    width: 29vw;
+    width: 31.8vw;
     display: block;
     background-color: #ff8d22;
     border-radius: 0.6vw;
