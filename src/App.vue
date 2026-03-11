@@ -41,6 +41,7 @@ h1 {
     margin: 1vw 0 0 0; 
     color: white;
     font-weight: 700;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
