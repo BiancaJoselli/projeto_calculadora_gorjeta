@@ -1,53 +1,60 @@
-<template>
-    <div class="app">
-        <h1 class="title">Calculadora de Gorjeta e Divisao</h1>
+<script setup lang="ts">
+import Entradas from './components/entradas.vue';
+import Saidas from './components/saidas.vue';
 
-        <div class="layout">
-            <div class="panel">
-                <h2>Entradas</h2>
-                <input v-model="bill" class="input" placeholder="Valor" />
-                <input v-model="tip" class="input" placeholder="Porcentagem" />
-                <input v-model="people" class="input" placeholder="Pessoas" />
-                <button class="small-btn" @click="calculate">Calcular</button>
-            </div>
+</script>
 
-            <div class="panel">
-                <h2>Resultado</h2>
-                <div class="result">Total: {{ total }}</div>
-                <div class="result">Gorjeta: {{ tipValue }}</div>
-                <div class="result">Por pessoa: {{ perPerson }}</div>
-                <div class="result">{{ message }}</div>
-            </div>
-        </div>
+<template>    
+    <h1 class="title">Calculadora de Gorjeta e Divisão</h1>
+
+    <div class="layout">
+    <entradas/>
+    <saidas/>
     </div>
+
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<style scoped>
 
-const bill = ref('');
-const tip = ref('');
-const people = ref('');
-
-const total = ref(0);
-const tipValue = ref(0);
-const perPerson = ref(0);
-const message = ref('');
-
-function calculate() {
-    const billValue = Number(bill.value);
-    const tipPercent = Number(tip.value);
-    const peopleCount = Number(people.value);
-
-    if (!billValue || !tipPercent || !peopleCount) {
-        alert('Preencha os dados');
-        message.value = 'Algo deu errado.';
-        return;
-    }
-
-    tipValue.value = (billValue * tipPercent) / 100;
-    total.value = billValue + tipValue.value;
-    perPerson.value = total.value / peopleCount;
-    message.value = 'Ok';
+.layout{ 
+    margin: 5vw 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    align-items: flex-start;
 }
-</script>
+
+.app {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 2vw;
+    margin: 2vw 0 0 0; 
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .layout{ 
+    flex-direction: column;
+    align-items: center;
+}
+
+    h1 {
+        font-size: 5vw;
+        margin: 2vw 0;
+    }
+}
+</style>
