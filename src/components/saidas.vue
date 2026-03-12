@@ -51,10 +51,10 @@ h2 {
     }
 
     .result {
-        padding: 1.5vw;
+        padding: 2vw;
         font-size: 3vw;
         margin: 1.5vw;
-        width: 65vw;
+        width: 68vw;
     }
 
 }
