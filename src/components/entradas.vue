@@ -77,7 +77,7 @@ input.erros {
 }
 
 button {
-    width: 30vw;
+    width: 31.8vw;
     display: block;
     background-color: #ff8d22;
     border-radius: 0.6vw;
