@@ -88,6 +88,9 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
     font-weight: 700;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center ;
 }
 
 button:hover {
@@ -116,7 +119,7 @@ button:active {
 
 @media (max-width: 600px) {
     h2 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     input {
@@ -124,12 +127,13 @@ button:active {
         font-size: 3vw;
         display: flex;
         margin: 1.5vw;
-        width: 55vw;
+        width: 62vw;
     }
 
     button {
-        width: 58vw;
+        width: 65vw;
         font-size: 3vw;
+        font-size: 3.3vw;
     }
 }
 </style>

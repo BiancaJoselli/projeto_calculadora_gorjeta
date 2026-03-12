@@ -47,14 +47,14 @@ h2 {
 @media (max-width: 600px) {
 
     h2 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .result {
         padding: 1.5vw;
         font-size: 3vw;
         margin: 1.5vw;
-        width: 55vw;
+        width: 65vw;
     }
 
 }
