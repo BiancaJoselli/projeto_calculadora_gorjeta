@@ -46,7 +46,7 @@ input {
     margin: 1vw;
     background-color: white;
     border: none;
-    padding: 0.8vw;
+    padding: 1vw;
     color: black;
     text-align: left;
     width: 30vw;
@@ -91,6 +91,7 @@ button {
     text-decoration: none;
     justify-content: center;
     align-items: center ;
+    color: white;
 }
 
 button:hover {
