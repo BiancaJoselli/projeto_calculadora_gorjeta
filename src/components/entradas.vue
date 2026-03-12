@@ -105,12 +105,13 @@ button:focus-visible {
 
 .small-btn:hover {
     background-color: #ffb547;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .clear-btn {
     margin: 1vw 0 0 0;
     background: none;
+    color: white;
 }
 
 button:active {
@@ -124,17 +125,19 @@ button:active {
     }
 
     input {
-        padding: 1.5vw;
+        padding: 2vw;
         font-size: 3vw;
         display: flex;
         margin: 1.5vw;
-        width: 62vw;
+        width: 68vw;
     }
 
     button {
-        width: 65vw;
+        width: 72vw;
         font-size: 3vw;
         font-size: 3.3vw;
+        padding: 2vw;
+        color: white;
     }
 }
 </style>
