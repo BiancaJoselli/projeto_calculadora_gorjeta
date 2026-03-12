@@ -33,7 +33,7 @@ h2 {
     margin: 0.8vw;
     background-color: #1e1e1e;
     border-left: 0.4vw solid #ff8d22;
-    padding: 0.6vw;
+    padding: 0.9vw;
     color: white;
     width: 28vw;
     font-size: 1.2vw;

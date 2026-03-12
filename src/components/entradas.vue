@@ -46,7 +46,7 @@ input {
     margin: 1vw;
     background-color: white;
     border: none;
-    padding: 0.8vw;
+    padding: 1vw;
     color: black;
     text-align: left;
     width: 30vw;
@@ -77,7 +77,7 @@ input.erros {
 }
 
 button {
-    width: 31.8vw;
+    width: 30vw;
     display: block;
     background-color: #ff8d22;
     border-radius: 0.6vw;
@@ -91,6 +91,7 @@ button {
     text-decoration: none;
     justify-content: center;
     align-items: center ;
+    color: white;
 }
 
 button:hover {
