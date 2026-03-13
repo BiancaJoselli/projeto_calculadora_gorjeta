@@ -78,7 +78,7 @@ input.erros {
 
 @media (max-width: 768px) {
     .erros-message {
-        font-size: 15px;
+        font-size: 13px;
         margin-top: -4px;
     }
 }
