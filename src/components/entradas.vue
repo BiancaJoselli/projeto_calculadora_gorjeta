@@ -76,6 +76,13 @@ input.erros {
     margin-top: -0.5vw;
 }
 
+@media (max-width: 768px) {
+    .erros-message {
+        font-size: 15px;
+        margin-top: -4px;
+    }
+}
+
 button {
     width: 31.8vw;
     display: block;
